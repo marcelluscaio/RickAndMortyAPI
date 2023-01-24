@@ -1,0 +1,4 @@
+- [ ] JS, Bootstrap
+- [ ] Acessar API Rick adn Morty (https://rickandmortyapi.com/)
+- [ ] Apresentar os dados com paginação
+- [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
