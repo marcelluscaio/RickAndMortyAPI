@@ -1,3 +1,4 @@
 - [X] Acessar API Rick adn Morty (https://rickandmortyapi.com/)
-- [ ] Apresentar os dados com paginação
+- [ ] Apresentar os dados na tela com paginação
+- [ ] FAzer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
