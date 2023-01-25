@@ -1,12 +1,15 @@
 const cardContainer = document.querySelector("#card-container");
-let img ='';
+
+/* const renderCards = (url) => {
+   fetch(url)
+} */
 
 
 fetch('https://rickandmortyapi.com/api/character')
    .then(resposta => resposta.json())
    .then(resposta => {
       resposta.results.forEach(result => {
-            img = result.image;
+            let img = result.image;
             let card = document.createElement('div');
             card.classList.add("card");
             card.style.width = "18rem";
