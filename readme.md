@@ -1,6 +1,7 @@
 - [X] Acessar API Rick adn Morty (https://rickandmortyapi.com/)
-- [ ] Apresentar os personagens na tela
+- [X] Apresentar os personagens na tela
 - [ ] Povoar card com outras informações
+- [ ] Fazer um card aparecer ao lado do outro
 - [ ] Fazer o filtro
 - [ ] FAzer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
