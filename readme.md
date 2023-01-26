@@ -1,8 +1,10 @@
 - [X] Acessar API Rick adn Morty (https://rickandmortyapi.com/)
 - [X] Apresentar os personagens na tela
-- [ ] Povoar card com outras informações
-- [ ] Fazer um card aparecer ao lado do outro
+- [X] Povoar card com outras informações
+- [X] Segregar responsabilidades de requisição e renderização da função
 - [ ] Fazer o filtro
+- [ ] Estilizar e organizar informações do card
+- [ ] Fazer um card aparecer ao lado do outro
 - [ ] FAzer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
 - https://getbootstrap.com/docs/5.3/components/navbar/#nav
