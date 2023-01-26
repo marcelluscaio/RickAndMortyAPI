@@ -1,4 +1,13 @@
+const searchField = document.querySelector("#search-field");
+const searchButton = document.querySelector("#search-button");
 const cardContainer = document.querySelector("#card-container");
+
+searchButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const searchTerm = searchField.value;
+      searchCharacter(searchTerm);
+   }
+);
 
 const makeRequest = url => {
    fetch(url)
@@ -7,6 +16,7 @@ const makeRequest = url => {
 };
 
 const renderResponse = response => {
+   cardContainer.innerHTML = ''; //Inner html ou outro?
    response.results.forEach(result =>
       {
          const img = result.image;
@@ -34,6 +44,12 @@ const renderResponse = response => {
          cardContainer.appendChild(card);
       });
 };
+
+const searchCharacter = (searchTerm) => {
+   fetch(`https://rickandmortyapi.com/api/character/?name=${searchTerm}`)
+      .then(response => response.json())
+      .then(response => renderResponse(response))
+}
 
 makeRequest('https://rickandmortyapi.com/api/character');
 
