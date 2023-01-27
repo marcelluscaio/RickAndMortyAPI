@@ -16,7 +16,10 @@ const makeRequest = url => {
 };
 
 const renderResponse = response => {
-   cardContainer.innerHTML = ''; //Inner html ou outro?
+   cardContainer.innerHTML = ''; 
+   //Inner html ou outro?
+   //https://bobbyhadz.com/blog/javascript-clear-div-contents
+   //https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
    response.results.forEach(result =>
       {
          const img = result.image;
@@ -46,15 +49,15 @@ const renderResponse = response => {
 };
 
 const searchCharacter = (searchTerm) => {
-   fetch(`https://rickandmortyapi.com/api/character/?name=${searchTerm}`)
+   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}`);
+   /* 
+   fetch()
       .then(response => response.json())
-      .then(response => renderResponse(response))
+      .then(response => renderResponse(response)) */
 }
 
 makeRequest('https://rickandmortyapi.com/api/character');
 
-
-//'https://rickandmortyapi.com/api/character'
 
 
 //Queremos pegar: name, status, species, gender, origin, location, image
