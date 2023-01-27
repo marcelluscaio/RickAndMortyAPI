@@ -56,7 +56,7 @@ searchButton.addEventListener('click', (e) => {
 );
 
 const checkStatus = () => {
-   let status;
+   let status = '';
    statusButtons.forEach(button => {
       if(button.checked === true){
          status = button.value;
@@ -64,9 +64,12 @@ const checkStatus = () => {
    });
    return status
 }
+//reafatorar: status = &status= + valor
+
 
 const searchCharacter = (searchTerm) => {
    const status = checkStatus();
+   console.log(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=${status}`);
    makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=${status}`);
 }
 //Queremos pegar: name, status, species, gender, origin, location, image
