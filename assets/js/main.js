@@ -2,13 +2,7 @@
 const searchField = document.querySelector("#search-field");
 const searchButton = document.querySelector("#search-button");
 const cardContainer = document.querySelector("#card-container");
-
-searchButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const searchTerm = searchField.value;
-      searchCharacter(searchTerm);
-   }
-);
+const statusButtons = document.querySelectorAll(".status");
 
 // Get Object Based on the Searched Term
 const makeRequest = url => {
@@ -17,8 +11,12 @@ const makeRequest = url => {
       .then(response => renderResponse(response))
 };
 
+//First render
+makeRequest('https://rickandmortyapi.com/api/character');
+
 const renderResponse = response => {
-   cardContainer.innerHTML = ''; 
+   cardContainer.innerHTML = '';
+   console.log(response);
    //Inner html ou outro?
    //https://bobbyhadz.com/blog/javascript-clear-div-contents
    //https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
@@ -50,18 +48,26 @@ const renderResponse = response => {
       });
 };
 
-const searchCharacter = (searchTerm) => {
-   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}`);
-   /* 
-   fetch()
-      .then(response => response.json())
-      .then(response => renderResponse(response)) */
+searchButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const searchTerm = searchField.value;
+      searchCharacter(searchTerm);
+   }
+);
+
+const checkStatus = () => {
+   let status;
+   statusButtons.forEach(button => {
+      if(button.checked === true){
+         status = button.value;
+      }
+   });
+   return status
 }
 
-makeRequest('https://rickandmortyapi.com/api/character');
-
-
-
+const searchCharacter = (searchTerm) => {
+   const status = checkStatus();
+   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=${status}`);
+}
 //Queremos pegar: name, status, species, gender, origin, location, image
-
 //mostrar async e await
