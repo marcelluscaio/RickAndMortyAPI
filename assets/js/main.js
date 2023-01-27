@@ -40,12 +40,12 @@ const createCards = (img, name, status, species, gender, originName, locationNam
    `
       <img src=${img} class="card-img-top" alt="...">
       <div class="card-body">
-         <h2 class="card-title">${name}</h2>
-         <p class="card-text">${status}</p>
-         <p class="card-text">${species}</p>
-         <p class="card-text">${gender}</p>
-         <p class="card-text">${originName}</p>
-         <p class="card-text">${locationName}</p>
+         <h2 class="card-title text-center py-2">${name}</h2>
+         <p class="card-text"><span class="fw-bold">Species: </span>${species}</p>
+         <p class="card-text"><span class="fw-bold">Gender: </span>${gender}</p>
+         <p class="card-text"><span class="fw-bold">Origin: </span>${originName}</p>
+         <p class="card-text"><span class="fw-bold">Current Location: </span>${locationName}</p>
+         <p class="card-text text-center">${status}</p>
       </div>
    `;
    cardContainer.appendChild(card);
