@@ -2,10 +2,12 @@
 - [X] Apresentar os personagens na tela
 - [X] Povoar card com outras informações
 - [X] Segregar responsabilidades de requisição e renderização da função
-- [ ] Fazer o filtro
-- [ ] Estilizar e organizar informações do card
+- [X] Estilizar informações do card
+- [X] Fazer o filtro de status
+- [ ] Fazer outros filtros
 - [ ] Fazer um card aparecer ao lado do outro
-- [ ] FAzer a paginacao
+- [ ] Organizar informações do card
+- [ ] Fazer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
 - https://getbootstrap.com/docs/5.3/components/navbar/#nav
 - https://rickandmortyapi.com/documentation/
