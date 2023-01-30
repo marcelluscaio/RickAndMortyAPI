@@ -3,6 +3,7 @@ const searchField = document.querySelector("#search-field");
 const searchButton = document.querySelector("#search-button");
 const cardContainer = document.querySelector("#card-container");
 const statusButtons = document.querySelectorAll(".status");
+const genderButtons = document.querySelectorAll(".gender");
 
 // Get Object Based on the Searched Term
 const makeRequest = url => {
@@ -68,10 +69,21 @@ const checkStatus = () => {
    return status
 };
 
+const checkGender = () => {
+   let gender = '';
+   genderButtons.forEach(button => {
+      if(button.checked === true){
+         gender = `&gender=${button.value}`;
+      }
+   });
+   return gender
+};
+
 
 const searchCharacter = (searchTerm) => {
    const status = checkStatus();
-   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}`);
+   const gender = checkGender();
+   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}${gender}`);
 }
 //Queremos pegar: name, status, species, gender, origin, location, image
 //mostrar async e await

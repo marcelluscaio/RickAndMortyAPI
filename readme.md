@@ -8,7 +8,9 @@
 - [X] Organizar informações do card
 - [X] Criar modal
 - [X] Criar campos gênero
+- [X] Criar filtro de gênero
 - [ ] Fazer outros filtros
+- [ ] Permitir desclicar radio button
 - [ ] Fazer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location
 - https://getbootstrap.com/docs/5.3/components/navbar/#nav
