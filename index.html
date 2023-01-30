@@ -20,19 +20,20 @@
    </nav>
 
    <main>
-
-      <div>
-         <label for="alive">Alive</label>
-         <input type="radio" id="alive" name="status" class="status" value="alive" >
-      </div>
-      <div>
-         <label for="dead">Dead</label>
-         <input type="radio" id="dead" name="status" class="status" value="dead" >
-      </div>
-      <div>
-         <label for="unknown">Unknown</label>
-         <input type="radio" id="unknown" name="status" class="status" value="unknown" >
-      </div>
+      <section class="filter-container d-flex text-light w-75 m-auto justify-content-around my-5">
+         <div>
+            <label for="alive">Alive</label>
+            <input type="radio" id="alive" name="status" class="status" value="alive" >
+         </div>
+         <div>
+            <label for="dead">Dead</label>
+            <input type="radio" id="dead" name="status" class="status" value="dead" >
+         </div>
+         <div>
+            <label for="unknown">Unknown</label>
+            <input type="radio" id="unknown" name="status" class="status" value="unknown" >
+         </div>
+      </section>
    
 
       <section id="card-container" class="container row gap-4 m-auto justify-content-center"></section>
