@@ -24,6 +24,8 @@ main {
 
 .card-body {
     background-color: #83C046;
+    margin-top: 5px;
+    border-radius: 20px 0;
 }
 
 .card-title {
