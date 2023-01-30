@@ -63,18 +63,17 @@ const checkStatus = () => {
    let status = '';
    statusButtons.forEach(button => {
       if(button.checked === true){
-         status = button.value;
+         status = `&status=${button.value}`;
       }
    });
    return status
-}
-//reafatorar: status = &status= + valor
+};
 
 
 const searchCharacter = (searchTerm) => {
    const status = checkStatus();
-   console.log(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=${status}`);
-   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}&status=${status}`);
+   console.log(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}`);
+   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}`);
 }
 //Queremos pegar: name, status, species, gender, origin, location, image
 //mostrar async e await
