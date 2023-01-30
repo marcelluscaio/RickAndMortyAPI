@@ -1,0 +1,49 @@
+body {
+    background-image:  url('../images/background.png');
+    background-size: cover;
+}
+
+main {
+    height: 100vh;
+}
+
+.card {
+    height: 500px;
+    position: relative;
+    background-color: #131212;
+    padding: 0;
+    border-radius: 20px 0;
+}
+
+.card-img-top {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
+.card-body {
+    background-color: #83C046;
+    margin-top: 5px;
+    border-radius: 20px 0;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #131212;
+}
+
+.card-text {
+    color: #131212;
+}
+
+.status-container {
+    position: absolute;
+    bottom: 5px;
+    width: 80%;
+    color: #ffffff;
+ }
+
+
+
