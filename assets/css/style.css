@@ -12,6 +12,14 @@ main {
     position: relative;
 }
 
+.card-img-top {
+    height: 200px;
+    width: 200px;
+    align-self: center;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+
 .status-container {
     position: absolute;
     bottom: 5px;
