@@ -19,39 +19,41 @@
       </div>
    </nav>
 
-   <div>
-      <label for="alive">Alive</label>
-      <input type="radio" id="alive" name="status" class="status" value="alive" >
-   </div>
-   <div>
-      <label for="dead">Dead</label>
-      <input type="radio" id="dead" name="status" class="status" value="dead" >
-   </div>
-   <div>
-      <label for="unknown">Unknown</label>
-      <input type="radio" id="unknown" name="status" class="status" value="unknown" >
-   </div>
    <main>
+
+      <div>
+         <label for="alive">Alive</label>
+         <input type="radio" id="alive" name="status" class="status" value="alive" >
+      </div>
+      <div>
+         <label for="dead">Dead</label>
+         <input type="radio" id="dead" name="status" class="status" value="dead" >
+      </div>
+      <div>
+         <label for="unknown">Unknown</label>
+         <input type="radio" id="unknown" name="status" class="status" value="unknown" >
+      </div>
+   
 
       <section id="card-container" class="container row gap-4 m-auto justify-content-center"></section>
 
-   </main>
+      <nav aria-label="...">
+         <ul class="pagination">
+            <li class="page-item disabled">
+               <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active" aria-current="page">
+               <span class="page-link">2</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+               <a class="page-link" href="#">Next</a>
+            </li>
+         </ul>
+      </nav>
 
-   <nav aria-label="...">
-      <ul class="pagination">
-         <li class="page-item disabled">
-            <span class="page-link">Previous</span>
-         </li>
-         <li class="page-item"><a class="page-link" href="#">1</a></li>
-         <li class="page-item active" aria-current="page">
-            <span class="page-link">2</span>
-         </li>
-         <li class="page-item"><a class="page-link" href="#">3</a></li>
-         <li class="page-item">
-            <a class="page-link" href="#">Next</a>
-         </li>
-      </ul>
-   </nav>
+   </main>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
    <script src="/assets/js/main.js"></script>
