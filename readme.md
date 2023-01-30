@@ -6,6 +6,8 @@
 - [X] Fazer o filtro de status
 - [X] Fazer um card aparecer ao lado do outro
 - [X] Organizar informações do card
+- [X] Criar modal
+- [X] Criar campos gênero
 - [ ] Fazer outros filtros
 - [ ] Fazer a paginacao
 - [ ] Permitir filtro por nome, status, espécie, gênero, origin and location

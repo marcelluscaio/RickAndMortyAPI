@@ -16,7 +16,6 @@ makeRequest('https://rickandmortyapi.com/api/character');
 
 const renderResponse = response => {
    cardContainer.innerHTML = '';
-   console.log(response);
    //Inner html ou outro?
    //https://bobbyhadz.com/blog/javascript-clear-div-contents
    //https://www.geeksforgeeks.org/how-to-clear-the-content-of-a-div-using-javascript/
@@ -72,7 +71,6 @@ const checkStatus = () => {
 
 const searchCharacter = (searchTerm) => {
    const status = checkStatus();
-   console.log(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}`);
    makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}`);
 }
 //Queremos pegar: name, status, species, gender, origin, location, image
