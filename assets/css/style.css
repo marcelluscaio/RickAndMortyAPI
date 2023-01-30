@@ -9,6 +9,13 @@ main {
 
 .card {
     height: 500px;
+    position: relative;
 }
+
+.status-container {
+    position: absolute;
+    bottom: 5px;
+    width: 80%;
+ }
 
 
