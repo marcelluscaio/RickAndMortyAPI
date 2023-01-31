@@ -6,6 +6,7 @@ const statusButtons = document.querySelectorAll(".status");
 const genderButtons = document.querySelectorAll(".gender");
 const speciesButtons = document.querySelectorAll(".species");
 
+
 // Get Object Based on the Searched Term
 const makeRequest = url => {
    fetch(url)
@@ -60,6 +61,22 @@ searchButton.addEventListener('click', (e) => {
    }
 );
 
+//Limit the checkbox selection to one option per category
+const limitCheckboxSelection = (checkbox) => {
+   let total = 0;
+   let checkButtons = checkbox;
+
+   for(i=0; i < checkButtons.length; i++) {
+       if(checkButtons[i].checked) {
+           total ++;
+       }
+       if(total > 1) {
+           checkButtons[i].checked = false;
+       }
+   }        
+}
+
+// Create filters based on user checkbox choice
 const checkStatus = () => {
    let status = '';
    statusButtons.forEach(button => {
@@ -90,12 +107,13 @@ const checkSpecies = () => {
    return species
 };
 
-
+// Include possible filters on search
 const searchCharacter = (searchTerm) => {
    const status = checkStatus();
    const gender = checkGender();
    const species = checkSpecies();
    makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}${gender}${species}`);
 }
+
 //Queremos pegar: name, status, species, gender, origin, location, image
 //mostrar async e await
