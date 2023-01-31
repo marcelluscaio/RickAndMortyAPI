@@ -76,42 +76,23 @@ const limitCheckboxSelection = (checkbox) => {
    }        
 }
 
-// Create filters based on user checkbox choice
-const checkStatus = () => {
-   let status = '';
-   statusButtons.forEach(button => {
+// Get checkbox filter values
+const getFilters = (checkbox, filter) => {
+   let filterType = '';
+   checkbox.forEach(button => {
       if(button.checked === true){
-         status = `&status=${button.value}`;
+         filterType = `&${filter}=${button.value}`;
       }
    });
-   return status
+   return filterType
 };
 
-const checkGender = () => {
-   let gender = '';
-   genderButtons.forEach(button => {
-      if(button.checked === true){
-         gender = `&gender=${button.value}`;
-      }
-   });
-   return gender
-};
 
-const checkSpecies = () => {
-   let species = '';
-   speciesButtons.forEach(button => {
-      if(button.checked === true){
-         species = `&species=${button.value}`;
-      }
-   });
-   return species
-};
-
-// Include possible filters on search
+// Include filters on search
 const searchCharacter = (searchTerm) => {
-   const status = checkStatus();
-   const gender = checkGender();
-   const species = checkSpecies();
+   const status = getFilters(statusButtons, 'status');
+   const gender = getFilters(genderButtons, 'gender');
+   const species = getFilters(speciesButtons, 'species');
    makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}${gender}${species}`);
 }
 
