@@ -1,6 +1,8 @@
 body {
     background-image:  url('../images/background.png');
     background-size: cover;
+    font-family: 'Asap Condensed', sans-serif;
+    letter-spacing: 1px;
 }
 
 main {
@@ -36,10 +38,16 @@ main {
 .card-title {
     font-size: 1.5rem;
     color: #131212;
+    font-weight: 700;
 }
 
 .card-text {
     color: #131212;
+    font-weight: 300;
+}
+
+.category {
+    font-weight: 700;
 }
 
 .status-container {
