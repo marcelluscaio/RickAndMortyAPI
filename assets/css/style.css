@@ -13,6 +13,22 @@ main {
     height: 100vh;
 }
 
+.side-bar {
+    width: 50%;
+    padding: 2%;
+    background-color: #ffffff;
+}
+
+.filter {
+   text-align: center;
+}
+
+.all-filters {
+    display: flex;
+    flex-direction: column;
+}
+
+
 .filter-container {
     background-color: #131212;
 }
