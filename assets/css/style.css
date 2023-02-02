@@ -23,7 +23,7 @@ main {
    text-align: center;
 }
 
-.all-filters {
+.all-filters, .category-filters {
     display: none;
 }
 
@@ -31,6 +31,11 @@ main {
 .filter-container {
     background-color: #131212;
 }
+
+legend:hover {
+    cursor: pointer;
+}
+
 
 .card {
     height: 500px;

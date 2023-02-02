@@ -42,80 +42,86 @@
 
             <div class="all-filters">
                <fieldset>
-                  <legend>Status</legend>
-                  <div>
-                     <input type="checkbox" id="alive" name="status" class="status" value="alive" onclick="limitCheckboxSelection(status)">
-                     <label for="alive">Alive</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="dead" name="status" class="status" value="dead" onclick="limitCheckboxSelection(status)">
-                     <label for="dead">Dead</label> 
-                  </div>
-                  <div>
-                     <input type="checkbox" id="unknown" name="status" class="status" value="unknown" onclick="limitCheckboxSelection(status)">
-                     <label for="unknown">Unknown</label>
-                  </div>
-               </fieldset>
-               <fieldset>
-                  <legend>Gender</legend>
-                  <div>
-                     <input type="checkbox" id="male" name="gender" class="gender" value="male" onclick="limitCheckboxSelection(gender)">
-                     <label for="male">Male</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="female" name="gender" class="gender" value="female" onclick="limitCheckboxSelection(gender)">
-                     <label for="female">Female</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="genderless" name="gender" class="gender" value="genderless" onclick="limitCheckboxSelection(gender)">
-                     <label for="genderless">Genderless</label>
-                  </div>
-                  <div>      
-                     <input type="checkbox" id="unknown" name="gender" class="gender" value="unknown" onclick="limitCheckboxSelection(gender)">
-                     <label for="unknown">Unknown</label>
+                  <legend class="categories">Status</legend>
+                  <div class="category-filters" id="category-status">
+                     <div>
+                        <input type="checkbox" id="alive" name="status" class="status" value="alive" onclick="limitCheckboxSelection(status)">
+                        <label for="alive">Alive</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="dead" name="status" class="status" value="dead" onclick="limitCheckboxSelection(status)">
+                        <label for="dead">Dead</label> 
+                     </div>
+                     <div>
+                        <input type="checkbox" id="unknown" name="status" class="status" value="unknown" onclick="limitCheckboxSelection(status)">
+                        <label for="unknown">Unknown</label>
+                     </div>
                   </div>
                </fieldset>
                <fieldset>
-                  <legend>Species</legend>
-                  <div>
-                     <input type="checkbox" id="human" name="species" class="species" value="human" onclick="limitCheckboxSelection(species)">
-                     <label for="human">Human</label>
+                  <legend class="categories">Gender</legend>
+                  <div class="category-filters" id="category-gender">
+                     <div>
+                        <input type="checkbox" id="male" name="gender" class="gender" value="male" onclick="limitCheckboxSelection(gender)">
+                        <label for="male">Male</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="female" name="gender" class="gender" value="female" onclick="limitCheckboxSelection(gender)">
+                        <label for="female">Female</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="genderless" name="gender" class="gender" value="genderless" onclick="limitCheckboxSelection(gender)">
+                        <label for="genderless">Genderless</label>
+                     </div>
+                     <div>      
+                        <input type="checkbox" id="unknown" name="gender" class="gender" value="unknown" onclick="limitCheckboxSelection(gender)">
+                        <label for="unknown">Unknown</label>
+                     </div>
                   </div>
-                  <div>
-                     <input type="checkbox" id="alien" name="species" class="species" value="alien" onclick="limitCheckboxSelection(species)">
-                     <label for="alien">Alien</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="humanoid" name="species" class="species" value="humanoid" onclick="limitCheckboxSelection(species)">
-                     <label for="humanoid">Humanoid</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="cronenberg" name="species" class="species" value="cronenberg" onclick="limitCheckboxSelection(species)">
-                     <label for="cronenberg">Cronenberg</label>
-                  </div>
-                  <div>   
-                     <input type="checkbox" id="robot" name="species" class="species" value="robot" onclick="limitCheckboxSelection(species)">
-                     <label for="robot">Robot</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="mythological" name="species" class="species" value="mythological" onclick="limitCheckboxSelection(species)">
-                     <label for="mythological">Mythological Creature</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="animal" name="species" class="species" value="animal" onclick="limitCheckboxSelection(species)">
-                     <label for="animal">Animal</label>
-                  </div>
-                  <div>
-                     <input type="checkbox" id="poopybutthole" name="species" class="species" value="poopybutthole" onclick="limitCheckboxSelection(species)">
-                     <label for="poopybutthole">Poopybutthole</label>
-                  </div>
-                  <div>   
-                     <input type="checkbox" id="disease" name="species" class="species" value="disease" onclick="limitCheckboxSelection(species)">
-                     <label for="disease">Disease</label>
-                  </div>
-                  <div>  
-                     <input type="checkbox" id="unknown" name="species" class="species" value="unknown" onclick="limitCheckboxSelection(species)">
-                     <label for="unknown">Unknown</label>
+               </fieldset>
+               <fieldset>
+                  <legend class="categories">Species</legend>
+                  <div class="category-filters" id="category-species">
+                     <div>
+                        <input type="checkbox" id="human" name="species" class="species" value="human" onclick="limitCheckboxSelection(species)">
+                        <label for="human">Human</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="alien" name="species" class="species" value="alien" onclick="limitCheckboxSelection(species)">
+                        <label for="alien">Alien</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="humanoid" name="species" class="species" value="humanoid" onclick="limitCheckboxSelection(species)">
+                        <label for="humanoid">Humanoid</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="cronenberg" name="species" class="species" value="cronenberg" onclick="limitCheckboxSelection(species)">
+                        <label for="cronenberg">Cronenberg</label>
+                     </div>
+                     <div>   
+                        <input type="checkbox" id="robot" name="species" class="species" value="robot" onclick="limitCheckboxSelection(species)">
+                        <label for="robot">Robot</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="mythological" name="species" class="species" value="mythological" onclick="limitCheckboxSelection(species)">
+                        <label for="mythological">Mythological Creature</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="animal" name="species" class="species" value="animal" onclick="limitCheckboxSelection(species)">
+                        <label for="animal">Animal</label>
+                     </div>
+                     <div>
+                        <input type="checkbox" id="poopybutthole" name="species" class="species" value="poopybutthole" onclick="limitCheckboxSelection(species)">
+                        <label for="poopybutthole">Poopybutthole</label>
+                     </div>
+                     <div>   
+                        <input type="checkbox" id="disease" name="species" class="species" value="disease" onclick="limitCheckboxSelection(species)">
+                        <label for="disease">Disease</label>
+                     </div>
+                     <div>  
+                        <input type="checkbox" id="unknown" name="species" class="species" value="unknown" onclick="limitCheckboxSelection(species)">
+                        <label for="unknown">Unknown</label>
+                     </div>
                   </div>
                </fieldset>
             </div>
