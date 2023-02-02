@@ -1,4 +1,6 @@
 const filterButton = document.querySelector("#filter-button");
+const sidebarMenu = document.querySelector("#sidebar-menu");
+const sidebar = document.querySelector(".sidebar");
 const filtersList = document.querySelector(".all-filters");
 const categories = document.querySelectorAll(".categories");
 const categoryStatus = document.querySelector("#category-status");
@@ -17,6 +19,12 @@ function showDropdown(dropdown) {
         dropdown.style.display = 'block';
     }	
 }
+
+
+sidebarMenu.addEventListener('click', (e) => {
+    e.preventDefault();
+    showDropdown(sidebar);
+});
 
 
 filterButton.addEventListener('click', (e) => {

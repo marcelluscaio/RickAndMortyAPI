@@ -21,10 +21,11 @@ main {
     cursor: pointer;
 }
 
-.side-bar {
+.sidebar {
     width: 50%;
     padding: 2%;
     background-color: #ffffff;
+    display: none;
 }
 
 .filter {
