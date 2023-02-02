@@ -5,16 +5,20 @@ body {
     letter-spacing: 1px;
 }
 
-.navbar-brand {
-    max-width: 15%;
+.sidebar-button{
+    position: fixed;
+    bottom: calc(2vh + 2vw);
+    right: calc(2vh + 2vw);
+    z-index: 2;
+    
+    width: 12%;
+    max-width: 3.5rem;
 }
 
-main {
-    height: 100vh;
-}
+
 
 .open-sidebar {
-    width: 5%;
+    width: 100%;
 }
 
 .open-sidebar:hover {
@@ -22,11 +26,34 @@ main {
 }
 
 .sidebar {
-    width: 50%;
-    padding: 2%;
+    display: block;
     background-color: #ffffff;
-    display: none;
+
+    position: fixed;
+    z-index: 1;
+    bottom: 2vw;
+    right: 2vw;
+    transform: scale(0);
+    transform-origin: 90% 80%;
+    transition: transform 1.5s, bottom 2s, right 2s;
+    
+    /* width: 50%;
+    padding: 2%;    
+    display: none; */
 }
+
+.show-sidebar{
+    transform: scale(1) translate(50%, 50%);
+    transform-origin: 90% 80%;
+    bottom: 50%;
+    right: 50%;
+}
+
+main {
+    height: 100vh;
+}
+
+
 
 .filter {
    text-align: center;
@@ -98,6 +125,16 @@ legend:hover {
     bottom: 5px;
     width: 80%;
     color: #ffffff;
+ }
+
+ @media screen and (min-width: 1000px){
+    .logo{
+       width: 50%!important; 
+    }
+
+    .sidebar-button{
+        display: none;
+    }
  }
 
 

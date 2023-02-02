@@ -20,10 +20,11 @@ function showDropdown(dropdown) {
     }	
 }
 
-
 sidebarMenu.addEventListener('click', (e) => {
     e.preventDefault();
-    showDropdown(sidebar);
+    /* showDropdown(sidebar); */
+    sidebar.classList.toggle('show-sidebar')
+
 });
 
 
