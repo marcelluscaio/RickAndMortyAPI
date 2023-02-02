@@ -24,8 +24,7 @@ main {
 }
 
 .all-filters {
-    display: flex;
-    flex-direction: column;
+    display: none;
 }
 
 
