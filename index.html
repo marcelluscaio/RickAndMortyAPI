@@ -18,123 +18,110 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
    <header>
-      <nav class="navbar bg-body-tertiary">
+      <nav class="navbar ">
          <div class="container-fluid">
-            <a class="navbar-brand">Navbar</a>
-            <form class="d-flex" role="search">
-               <input class="form-control me-2" id="search-field" type="search" placeholder="Search" aria-label="Search">
-               <button class="btn btn-outline-success" id="search-button" type="submit">Search</button>
-               <button class="btn btn-outline-success" id="filter-button" data-bs-toggle="modal" data-bs-target="#modal">Filter</button>
-            </form>
+            <a class="navbar-brand text-center"><img class="w-100" src="assets/images/main-rick-and-morty.png" alt="rick and morty"></a>
          </div>
       </nav>
    </header>
+
    <main>
-      <div class="text-center">
-         <img class="w-50 py-5" src="assets/images/main-rick-and-morty.png" alt="rick and morty">
-      </div>
+      <button>Open side</button>
+      <aside class="side-bar d-flex flex-column">
+         <form role="search">
+            <input class="form-control me-2" id="search-field" type="search" placeholder="Search for a character" aria-label="Search">
+           
+            <button class="btn btn-outline-success" id="filter-button" >Filter</button>
 
-      <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-         <div class="modal-dialog">
-            <div class="modal-content">
-               <div class="modal-header">
-               <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body">
-                  <form>
-                     <fieldset>
-                        <legend>Status</legend>
-                        <div>
-                           <label for="alive">Alive</label>
-                           <input type="checkbox" id="alive" name="status" class="status" value="alive" onclick="limitCheckboxSelection(status)">
-                        </div>
-                        <div>
-                           <label for="dead">Dead</label>
-                           <input type="checkbox" id="dead" name="status" class="status" value="dead" onclick="limitCheckboxSelection(status)">
-                        </div>
-                        <div>
-                           <label for="unknown">Unknown</label>
-                           <input type="checkbox" id="unknown" name="status" class="status" value="unknown" onclick="limitCheckboxSelection(status)">
-                        </div>
-                     </fieldset>
-                     <fieldset>
-                        <legend>Gender</legend>
-                        <div>
-                           <label for="male">Male</label>
-                           <input type="checkbox" id="male" name="gender" class="gender" value="male" onclick="limitCheckboxSelection(gender)">
-                        </div>
-                        <div>
-                           <label for="female">Female</label>
-                           <input type="checkbox" id="female" name="gender" class="gender" value="female" onclick="limitCheckboxSelection(gender)">
-                        </div>
-                        <div>
-                           <label for="genderless">Genderless</label>
-                           <input type="checkbox" id="genderless" name="gender" class="gender" value="genderless" onclick="limitCheckboxSelection(gender)">
-                        </div>
-                        <div>
-                           <label for="unknown">Unknown</label>
-                           <input type="checkbox" id="unknown" name="gender" class="gender" value="unknown" onclick="limitCheckboxSelection(gender)">
-                        </div>
-                     </fieldset>
-
-                     <fieldset>
-                        <legend>Species</legend>
-                        <div>
-                           <label for="human">Human</label>
-                           <input type="checkbox" id="human" name="species" class="species" value="human" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="alien">Alien</label>
-                           <input type="checkbox" id="alien" name="species" class="species" value="alien" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="humanoid">Humanoid</label>
-                           <input type="checkbox" id="humanoid" name="species" class="species" value="humanoid" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="cronenberg">Cronenberg</label>
-                           <input type="checkbox" id="cronenberg" name="species" class="species" value="cronenberg" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="robot">Robot</label>
-                           <input type="checkbox" id="robot" name="species" class="species" value="robot" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="mythological">Mythological Creature</label>
-                           <input type="checkbox" id="mythological" name="species" class="species" value="mythological" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="animal">Animal</label>
-                           <input type="checkbox" id="animal" name="species" class="species" value="animal" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="poopybutthole">Poopybutthole</label>
-                           <input type="checkbox" id="poopybutthole" name="species" class="species" value="poopybutthole" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="disease">Disease</label>
-                           <input type="checkbox" id="disease" name="species" class="species" value="disease" onclick="limitCheckboxSelection(species)">
-                        </div>
-                        <div>
-                           <label for="unknown">Unknown</label>
-                           <input type="checkbox" id="unknown" name="species" class="species" value="unknown" onclick="limitCheckboxSelection(species)">
-                        </div>
-                     </fieldset>
-                  </form>
-               </div>
-               <div class="modal-footer">
-               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-               <button type="button" class="btn btn-primary">Save changes</button>
-               </div>
+            <div class="all-filters">
+               <fieldset>
+                  <legend>Status</legend>
+                  <div>
+                     <label for="alive">Alive</label>
+                     <input type="checkbox" id="alive" name="status" class="status" value="alive" onclick="limitCheckboxSelection(status)">
+                  </div>
+                  <div>
+                     <label for="dead">Dead</label>
+                     <input type="checkbox" id="dead" name="status" class="status" value="dead" onclick="limitCheckboxSelection(status)">
+                  </div>
+                  <div>
+                     <label for="unknown">Unknown</label>
+                     <input type="checkbox" id="unknown" name="status" class="status" value="unknown" onclick="limitCheckboxSelection(status)">
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>Gender</legend>
+                  <div>
+                     <label for="male">Male</label>
+                     <input type="checkbox" id="male" name="gender" class="gender" value="male" onclick="limitCheckboxSelection(gender)">
+                  </div>
+                  <div>
+                     <label for="female">Female</label>
+                     <input type="checkbox" id="female" name="gender" class="gender" value="female" onclick="limitCheckboxSelection(gender)">
+                  </div>
+                  <div>
+                     <label for="genderless">Genderless</label>
+                     <input type="checkbox" id="genderless" name="gender" class="gender" value="genderless" onclick="limitCheckboxSelection(gender)">
+                  </div>
+                  <div>
+                     <label for="unknown">Unknown</label>
+                     <input type="checkbox" id="unknown" name="gender" class="gender" value="unknown" onclick="limitCheckboxSelection(gender)">
+                  </div>
+               </fieldset>
+               <fieldset>
+                  <legend>Species</legend>
+                  <div>
+                     <label for="human">Human</label>
+                     <input type="checkbox" id="human" name="species" class="species" value="human" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="alien">Alien</label>
+                     <input type="checkbox" id="alien" name="species" class="species" value="alien" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="humanoid">Humanoid</label>
+                     <input type="checkbox" id="humanoid" name="species" class="species" value="humanoid" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="cronenberg">Cronenberg</label>
+                     <input type="checkbox" id="cronenberg" name="species" class="species" value="cronenberg" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="robot">Robot</label>
+                     <input type="checkbox" id="robot" name="species" class="species" value="robot" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="mythological">Mythological Creature</label>
+                     <input type="checkbox" id="mythological" name="species" class="species" value="mythological" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="animal">Animal</label>
+                     <input type="checkbox" id="animal" name="species" class="species" value="animal" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="poopybutthole">Poopybutthole</label>
+                     <input type="checkbox" id="poopybutthole" name="species" class="species" value="poopybutthole" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="disease">Disease</label>
+                     <input type="checkbox" id="disease" name="species" class="species" value="disease" onclick="limitCheckboxSelection(species)">
+                  </div>
+                  <div>
+                     <label for="unknown">Unknown</label>
+                     <input type="checkbox" id="unknown" name="species" class="species" value="unknown" onclick="limitCheckboxSelection(species)">
+                  </div>
+               </fieldset>
             </div>
-         </div>
-      </div>
-      
-   
 
+            <button class="btn btn-outline-success" id="search-button" type="submit">Search</button>
+         </form>
+      </aside>
+
+ 
       <section id="card-container" class="container row gap-4 m-auto justify-content-center"></section>
+
 
       <nav aria-label="...">
          <ul class="pagination">

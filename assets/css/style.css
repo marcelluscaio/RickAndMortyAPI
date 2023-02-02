@@ -5,6 +5,10 @@ body {
     letter-spacing: 1px;
 }
 
+.navbar-brand {
+    max-width: 15%;
+}
+
 main {
     height: 100vh;
 }
