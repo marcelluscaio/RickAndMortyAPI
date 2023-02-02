@@ -1,10 +1,59 @@
 body {
-    background-image:  url('../images/background.png');
+    background-image:  url('../images/background.jpg');
     background-size: cover;
+    font-family: 'Asap Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar-brand {
+    max-width: 15%;
 }
 
 main {
     height: 100vh;
+}
+
+.open-sidebar {
+    width: 5%;
+}
+
+.open-sidebar:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    width: 50%;
+    padding: 2%;
+    background-color: #ffffff;
+    display: none;
+}
+
+.filter {
+   text-align: center;
+}
+
+.all-filters, .category-filters {
+    display: none;
+    font-size: 1rem;
+}
+
+.filter-container {
+    background-color: #131212;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 3%;
+}
+
+label {
+    font-weight: 300;
+    padding-left: 5px;
+}
+
+legend:hover {
+    cursor: pointer;
 }
 
 .card {
@@ -32,10 +81,16 @@ main {
 .card-title {
     font-size: 1.5rem;
     color: #131212;
+    font-weight: 700;
 }
 
 .card-text {
     color: #131212;
+    font-weight: 300;
+}
+
+.category {
+    font-weight: 700;
 }
 
 .status-container {

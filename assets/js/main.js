@@ -4,6 +4,8 @@ const searchButton = document.querySelector("#search-button");
 const cardContainer = document.querySelector("#card-container");
 const statusButtons = document.querySelectorAll(".status");
 const genderButtons = document.querySelectorAll(".gender");
+const speciesButtons = document.querySelectorAll(".species");
+
 
 // Get Object Based on the Searched Term
 const makeRequest = url => {
@@ -37,11 +39,11 @@ const renderResponse = response => {
             <img src=${img} class="card-img-top" alt="...">
             <div class="card-body">
                <div class="character-description">
-                  <h2 class="card-title text-center py-2 fw-bold">${name}</h2>
-                  <p class="card-text"><span class="fw-bold">Species: </span>${species}</p>
-                  <p class="card-text"><span class="fw-bold">Gender: </span>${gender}</p>
-                  <p class="card-text"><span class="fw-bold">Origin: </span>${originName}</p>
-                  <p class="card-text"><span class="fw-bold">Current Location: </span>${locationName}</p>
+                  <h2 class="card-title text-center py-2">${name}</h2>
+                  <p class="card-text"><span class="category">Species: </span>${species}</p>
+                  <p class="card-text"><span class="category">Gender: </span>${gender}</p>
+                  <p class="card-text"><span class="category">Origin: </span>${originName}</p>
+                  <p class="card-text"><span class="category">Current Location: </span>${locationName}</p>
                </div>
                <div class="status-container">
                   <p class="card-text text-center m-auto text-light text-uppercase fw-bold">${status}</p>
@@ -59,31 +61,40 @@ searchButton.addEventListener('click', (e) => {
    }
 );
 
-const checkStatus = () => {
-   let status = '';
-   statusButtons.forEach(button => {
-      if(button.checked === true){
-         status = `&status=${button.value}`;
-      }
-   });
-   return status
-};
+//Limit the checkbox selection to one option per category
+const limitCheckboxSelection = (checkbox) => {
+   let total = 0;
+   let checkButtons = checkbox;
 
-const checkGender = () => {
-   let gender = '';
-   genderButtons.forEach(button => {
-      if(button.checked === true){
-         gender = `&gender=${button.value}`;
-      }
-   });
-   return gender
-};
-
-
-const searchCharacter = (searchTerm) => {
-   const status = checkStatus();
-   const gender = checkGender();
-   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}${gender}`);
+   for(i=0; i < checkButtons.length; i++) {
+       if(checkButtons[i].checked) {
+           total ++;
+       }
+       if(total > 1) {
+           checkButtons[i].checked = false;
+       }
+   }        
 }
+
+// Get checkbox filter values
+const getFilters = (checkbox, filter) => {
+   let filterType = '';
+   checkbox.forEach(button => {
+      if(button.checked === true){
+         filterType = `&${filter}=${button.value}`;
+      }
+   });
+   return filterType
+};
+
+
+// Include filters on search
+const searchCharacter = (searchTerm) => {
+   const status = getFilters(statusButtons, 'status');
+   const gender = getFilters(genderButtons, 'gender');
+   const species = getFilters(speciesButtons, 'species');
+   makeRequest(`https://rickandmortyapi.com/api/character/?name=${searchTerm}${status}${gender}${species}`);
+}
+
 //Queremos pegar: name, status, species, gender, origin, location, image
 //mostrar async e await
