@@ -63,18 +63,18 @@ searchButton.addEventListener('click', (e) => {
 
 //Limit the checkbox selection to one option per category
 const limitCheckboxSelection = (checkbox) => {
-   let total = 0;
-   let checkButtons = checkbox;
-
-   for(i=0; i < checkButtons.length; i++) {
-       if(checkButtons[i].checked) {
-           total ++;
-       }
-       if(total > 1) {
-           checkButtons[i].checked = false;
+   
+   for(i=0; i < statusButtons.length; i++) {
+       if(statusButtons[i] !== checkbox){
+         statusButtons[i].checked = false
        }
    }        
 }
+
+
+statusButtons.forEach(button => button.addEventListener('click', (event) => limitCheckboxSelection(event.target)));
+
+
 
 // Get checkbox filter values
 const getFilters = (checkbox, filter) => {

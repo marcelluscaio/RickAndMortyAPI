@@ -36,7 +36,7 @@
       <form role="search">
          <input class="form-control me-2" id="search-field" type="search" placeholder="Search character" aria-label="Search">
          
-         <div class="filter">
+         <div class="filter btn-circle">
             <button class="btn btn-outline-success" id="filter-button" >Filter</button>
          </div>
 
@@ -44,8 +44,20 @@
             <fieldset>
                <legend class="categories">Status</legend>
                <div class="category-filters" id="category-status">
-                  <div>
-                     <input type="checkbox" id="alive" name="status" class="status" value="alive" onclick="limitCheckboxSelection(status)">
+                  <div class="form-check form-switch">
+                     <input class="form-check-input status" type="checkbox" role="switch" id="alive">
+                     <label class="form-check-label" for="alive">Alive</label>
+                  </div>
+                  <div class="form-check form-switch">
+                     <input class="form-check-input status" type="checkbox" role="switch" id="dead">
+                     <label class="form-check-label" for="dead">Dead</label>
+                  </div>
+                  <div class="form-check form-switch">
+                     <input class="form-check-input status" type="checkbox" role="switch" id="unknown">
+                     <label class="form-check-label" for="unknown">Unknown</label>
+                  </div>
+                  <!-- <div>
+                     <input type="checkbox" id="alive" name="outro" class="status" value="alive" onclick="limitCheckboxSelection(outro)">
                      <label for="alive">Alive</label>
                   </div>
                   <div>
@@ -55,7 +67,7 @@
                   <div>
                      <input type="checkbox" id="unknown" name="status" class="status" value="unknown" onclick="limitCheckboxSelection(status)">
                      <label for="unknown">Unknown</label>
-                  </div>
+                  </div> -->
                </div>
             </fieldset>
             <fieldset>

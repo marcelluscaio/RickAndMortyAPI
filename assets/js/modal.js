@@ -7,6 +7,7 @@ const categoryStatus = document.querySelector("#category-status");
 const categoryGender = document.querySelector("#category-gender");
 const categorySpecies = document.querySelector("#category-species");
 
+
 function showDropdown(dropdown) {
 	
     if(dropdown.style.display == 'none') {

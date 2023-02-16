@@ -15,8 +15,6 @@ body {
     max-width: 3.5rem;
 }
 
-
-
 .open-sidebar {
     width: 100%;
 }
@@ -33,13 +31,19 @@ body {
     z-index: 1;
     bottom: 2vw;
     right: 2vw;
+    width: 80%;
+
     transform: scale(0);
     transform-origin: 90% 80%;
-    transition: transform 1.5s, bottom 2s, right 2s;
+    transition: transform 1s, bottom 1s, right 1s;
     
     /* width: 50%;
     padding: 2%;    
-    display: none; */
+    display: none; 
+    https://www.joshwcomeau.com/css/transforms/#transform-origin-6
+    Explorar origin
+    Usar transition timing funciont diferentes
+    */
 }
 
 .show-sidebar{
@@ -52,8 +56,6 @@ body {
 main {
     height: 100vh;
 }
-
-
 
 .filter {
    text-align: center;
